@@ -73,10 +73,18 @@ async function searchFunction() {
     } else if (searchCategory === "temple") {
         matchedResults = data.temples.slice(0, 2); // Limit to two recommendations
     } else if (searchCategory === "country") {
-        matchedResults = data.countries.slice(0, 2); // Limit to two recommendations
+        data.countries.slice(0, 2).forEach(country => {
+            country.cities.slice(0, 2).forEach(city => {
+                matchedResults.push({
+                    name: city.name,
+                    imageUrl: city.imageUrl,
+                    description: city.description
+                });
+            });
+        });
     }
 
-    // Display results if found, else show "No results found"
+    // Display results if found
     if (matchedResults.length > 0) {
         matchedResults.forEach(item => {
             let recDiv = document.createElement('div');
@@ -93,7 +101,7 @@ async function searchFunction() {
             description.textContent = item.description;
 
             recDiv.appendChild(image); // Image first
-            recDiv.appendChild(title); // Location second
+            recDiv.appendChild(title); // City name second
             recDiv.appendChild(description); // Description underneath
 
             resultsDiv.appendChild(recDiv);
