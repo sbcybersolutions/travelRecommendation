@@ -164,3 +164,72 @@ body {
     font-size: 16px;
     color: #ddd;
 }
+
+
+/* Contact Page Layout */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* Left Side: Contact Info */
+.contact-info {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.contact-info h1 {
+    font-size: 36px;
+}
+
+/* Right Side: Contact Form */
+.contact-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #005f73;
+}

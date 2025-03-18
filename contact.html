@@ -8,14 +8,39 @@
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="travel_recommendation.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
     </div>
 
-    <h1>Contact Us</h1>
-    <p>Feel free to reach out via email at contact@example.com.</p>
+    <!-- Contact Page Layout -->
+    <div class="contact-container">
+        
+        <!-- Left Side: Contact Us Title -->
+        <div class="contact-info">
+            <h1>Contact Us</h1>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
 
 </body>
 </html>
+
